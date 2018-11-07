@@ -1,0 +1,74 @@
+CREATE TABLE [dbo].[CustomerDTOs] (
+    [Id]                 NVARCHAR (450) NOT NULL,
+    [CompanyName]        NVARCHAR (MAX) NULL,
+    [LastName]           NVARCHAR (MAX) NULL,
+    [MiddleName]         NVARCHAR (MAX) NULL,
+    [FirstName]          NVARCHAR (MAX) NULL,
+    [PersonTitle]        NVARCHAR (MAX) NULL,
+    [Gender]             NVARCHAR (MAX) NULL,
+    [CareOfName]         NVARCHAR (MAX) NULL,
+    [AddressLine1]       NVARCHAR (MAX) NULL,
+    [AddressLine2]       NVARCHAR (MAX) NULL,
+    [AddressLine3]       NVARCHAR (MAX) NULL,
+    [PostCode]           NVARCHAR (MAX) NULL,
+    [CityName]           NVARCHAR (MAX) NULL,
+    [County]             NVARCHAR (MAX) NULL,
+    [State]              NVARCHAR (MAX) NULL,
+    [Province]           NVARCHAR (MAX) NULL,
+    [Country]            NVARCHAR (MAX) NULL,
+    [CustomerType]       NVARCHAR (MAX) NULL,
+    [IkeaFamilyNumber]   NVARCHAR (MAX) NULL,
+    [TaxRegNo]           NVARCHAR (MAX) NULL,
+    [TaxIdType]          NVARCHAR (MAX) NULL,
+    [OrganisationNumber] NVARCHAR (MAX) NULL,
+    [PassportNumber]     NVARCHAR (MAX) NULL,
+    [TelephoneHome]      NVARCHAR (MAX) NULL,
+    [TelephoneWork]      NVARCHAR (MAX) NULL,
+    [TelephoneMobile]    NVARCHAR (MAX) NULL,
+    [Fax]                NVARCHAR (MAX) NULL,
+    [Email]              NVARCHAR (MAX) NULL,
+    [IdentityType]       NVARCHAR (MAX) NULL,
+    [IdentityNumber]     NVARCHAR (MAX) NULL,
+    [PreferedLanguage]   NVARCHAR (MAX) NULL,
+    [ContactType]        NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_CustomerDTOs] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+-----------------------------------------------
+CREATE TABLE [dbo].[LineDTOs] (
+    [Id]            NVARCHAR (450) NOT NULL,
+    [ItemId]        NVARCHAR (MAX) NULL,
+    [Quantity]      INT            NOT NULL,
+    [ReasonCode]    NVARCHAR (MAX) NULL,
+    [SubReasonCode] NVARCHAR (MAX) NULL,
+    [ReturnHeadId]  NVARCHAR (450) NULL,
+    CONSTRAINT [PK_LineDTOs] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_LineDTOs_ReturnHeadDTOs_ReturnHeadId] FOREIGN KEY ([ReturnHeadId]) REFERENCES [dbo].[ReturnHeadDTOs] ([Id])
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_LineDTOs_ReturnHeadId]
+    ON [dbo].[LineDTOs]([ReturnHeadId] ASC);
+
+----------------------------------------------------------------
+
+CREATE TABLE [dbo].[ReturnHeadDTOs] (
+    [Id]                NVARCHAR (450) NOT NULL,
+    [BuCode]            NVARCHAR (MAX) NULL,
+    [TillNumber]        NVARCHAR (MAX) NULL,
+    [TransactionNumber] NVARCHAR (MAX) NULL,
+    [Date]              NVARCHAR (MAX) NULL,
+    [OrderNumber]       NVARCHAR (MAX) NULL,
+    [CustomerId]        NVARCHAR (450) NULL,
+    CONSTRAINT [PK_ReturnHeadDTOs] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_ReturnHeadDTOs_CustomerDTOs_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [dbo].[CustomerDTOs] ([Id])
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_ReturnHeadDTOs_CustomerId]
+    ON [dbo].[ReturnHeadDTOs]([CustomerId] ASC);
+
