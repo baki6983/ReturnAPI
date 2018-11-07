@@ -1,0 +1,14 @@
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\bin\Debug\netcoreapp2.1\ExpressReturnAPI.deps.json
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\bin\Debug\netcoreapp2.1\ExpressReturnAPI.runtimeconfig.json
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\bin\Debug\netcoreapp2.1\ExpressReturnAPI.runtimeconfig.dev.json
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\bin\Debug\netcoreapp2.1\ExpressReturnAPI.dll
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\bin\Debug\netcoreapp2.1\ExpressReturnAPI.pdb
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.csprojAssemblyReference.cache
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.csproj.CoreCompileInputs.cache
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.RazorAssemblyInfo.cache
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.RazorAssemblyInfo.cs
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.AssemblyInfoInputs.cache
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.AssemblyInfo.cs
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.RazorTargetAssemblyInfo.cache
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.dll
+C:\Users\baki\source\repos\ExpressReturnAPI\ExpressReturnAPI\obj\Debug\netcoreapp2.1\ExpressReturnAPI.pdb
